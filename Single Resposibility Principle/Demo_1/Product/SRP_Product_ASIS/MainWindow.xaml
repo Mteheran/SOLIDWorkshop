@@ -5,38 +5,79 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SRP_Producto"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="380">
+        Title="MainWindow" Height="600" Width="560">
+    <Window.Resources>
+        <Style x:Key="LabelStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Margin" Value="0,5" />
+        </Style>
+
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="Width" Value="300" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Margin" Value="0,5" />
+        </Style>
+
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="150" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Margin" Value="0,5" />
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="600" />
         </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="Detalles del Producto" Style="{StaticResource TitleStyle}" />
+            <!-- Botón de Guardar -->
+            <Button  Content="Guardar" Width="100" Click="ButtonSave_Click" HorizontalAlignment="Right"  Height="20" />
+        </StackPanel>
+        <ScrollViewer Grid.Row="1"  >
+            <Grid Margin="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="150" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
 
-        <TextBlock Text="Detalles del Producto" Style="{StaticResource TitleStyle}" />
+                <!-- Nombre del Producto -->
+                <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Text="Nombre del Producto:" />
+                <TextBox Grid.Row="0" Grid.Column="1" Name="txtProductName" Width="300" VerticalAlignment="Center" />
 
-        <ScrollViewer Grid.Row="1">
-            <StackPanel Margin="20" Width="500" VerticalAlignment="Top">
-                <TextBlock Text="Nombre del Producto:" />
-                <TextBox Name="txtProductName" Width="300" HorizontalAlignment="Left" />
+                <!-- Precio -->
+                <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Text="Precio:" />
+                <TextBox Grid.Row="1" Grid.Column="1" Name="txtPrice" Width="300" VerticalAlignment="Center" />
 
-                <TextBlock Text="Precio:" />
-                <TextBox Name="txtPrice" Width="300" HorizontalAlignment="Left"/>
+                <!-- Descripción -->
+                <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Top" Text="Descripción:" />
+                <TextBox Grid.Row="2" Grid.Column="1" Name="txtDescription" Width="300" Height="100" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top" />
 
-                <TextBlock Text="Descripción:" />
-                <TextBox Name="txtDescription" Width="300" HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" AcceptsReturn="True" />
+                <!-- Fabricante -->
+                <TextBlock Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Text="Fabricante:" />
+                <TextBox Grid.Row="3" Grid.Column="1" Name="txtManufacturer" Width="300" VerticalAlignment="Center" />
 
-                <TextBlock Text="Fabricante:" />
-                <TextBox Name="txtManufacturer" Width="300" HorizontalAlignment="Left" />
+                <!-- Número de Serie -->
+                <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Text="Número de Serie:" />
+                <TextBox Grid.Row="4" Grid.Column="1" Name="txtSerialNumber" Width="300" VerticalAlignment="Center" />
 
-                <TextBlock Text="Número de Serie:" />
-                <TextBox Name="txtSerialNumber" Width="300" HorizontalAlignment="Left" />
+                <!-- Imagen del Producto -->
+                <TextBlock Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Text="Imagen del Producto:" />
+                <StackPanel Grid.Row="5" Grid.Column="1">
+                    <Button   Name="btnUploadImage" Width="150" Content="Subir Imagen" VerticalAlignment="Center" Click="btnUploadImage_Click" />
+                    <Image   Name="imgProductImage" Width="100" Height="100" VerticalAlignment="Center" />
 
-                <TextBlock Text="Imagen del Producto:" />
-                <Button Name="btnUploadImage" Width="150" Content="Subir Imagen" HorizontalAlignment="Left" Click="btnUploadImage_Click" />
-                <Image Name="imgProductImage" Width="66" Height="73" />
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
 
-                <Button Content="Guardar" Width="100" Click="ButtonSave_Click" />
-            </StackPanel>
-        </ScrollViewer>     
     </Grid>
 </Window>
