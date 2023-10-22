@@ -1,0 +1,42 @@
+﻿<Window x:Class="SRP_Producto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SRP_Producto"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="380">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Detalles del Producto" Style="{StaticResource TitleStyle}" />
+
+        <ScrollViewer Grid.Row="1">
+            <StackPanel Margin="20" Width="500" VerticalAlignment="Top">
+                <TextBlock Text="Nombre del Producto:" />
+                <TextBox Name="txtProductName" Width="300" HorizontalAlignment="Left" />
+
+                <TextBlock Text="Precio:" />
+                <TextBox Name="txtPrice" Width="300" HorizontalAlignment="Left"/>
+
+                <TextBlock Text="Descripción:" />
+                <TextBox Name="txtDescription" Width="300" HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" AcceptsReturn="True" />
+
+                <TextBlock Text="Fabricante:" />
+                <TextBox Name="txtManufacturer" Width="300" HorizontalAlignment="Left" />
+
+                <TextBlock Text="Número de Serie:" />
+                <TextBox Name="txtSerialNumber" Width="300" HorizontalAlignment="Left" />
+
+                <TextBlock Text="Imagen del Producto:" />
+                <Button Name="btnUploadImage" Width="150" Content="Subir Imagen" HorizontalAlignment="Left" Click="btnUploadImage_Click" />
+                <Image Name="imgProductImage" Width="66" Height="73" />
+
+                <Button Content="Guardar" Width="100" Click="ButtonSave_Click" />
+            </StackPanel>
+        </ScrollViewer>     
+    </Grid>
+</Window>

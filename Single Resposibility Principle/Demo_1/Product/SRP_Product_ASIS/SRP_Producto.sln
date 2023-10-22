@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SRP_Product_ASIS", "SRP_Product_ASIS.csproj", "{1B61F96B-888D-4AA9-98D6-C346E38370C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SRP_Product_TOBE", "..\SRP_Demo\SRP_Product_TOBE.csproj", "{D8C56DF7-417D-40C6-82DA-C8BF6194DBD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B61F96B-888D-4AA9-98D6-C346E38370C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B61F96B-888D-4AA9-98D6-C346E38370C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B61F96B-888D-4AA9-98D6-C346E38370C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B61F96B-888D-4AA9-98D6-C346E38370C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8C56DF7-417D-40C6-82DA-C8BF6194DBD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8C56DF7-417D-40C6-82DA-C8BF6194DBD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8C56DF7-417D-40C6-82DA-C8BF6194DBD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8C56DF7-417D-40C6-82DA-C8BF6194DBD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {320B7851-513F-46BD-A793-AB5BB1C5761D}
+	EndGlobalSection
+EndGlobal

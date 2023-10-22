@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SRP_PersonService_ASIS", "Person\SRP_PersonService_ASIS\SRP_PersonService_ASIS.csproj", "{988835F9-EB61-43CF-81D0-A33BCAD91556}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SRP_PersonService_TOBE", "Person\SRP_PersonService_TOBE\SRP_PersonService_TOBE.csproj", "{F47C98B7-7D0E-4CA5-83FC-D8588AD9A648}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{988835F9-EB61-43CF-81D0-A33BCAD91556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{988835F9-EB61-43CF-81D0-A33BCAD91556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{988835F9-EB61-43CF-81D0-A33BCAD91556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{988835F9-EB61-43CF-81D0-A33BCAD91556}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F47C98B7-7D0E-4CA5-83FC-D8588AD9A648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F47C98B7-7D0E-4CA5-83FC-D8588AD9A648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F47C98B7-7D0E-4CA5-83FC-D8588AD9A648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F47C98B7-7D0E-4CA5-83FC-D8588AD9A648}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2FA2534F-14C6-4891-8795-B95797D99DDA}
+	EndGlobalSection
+EndGlobal

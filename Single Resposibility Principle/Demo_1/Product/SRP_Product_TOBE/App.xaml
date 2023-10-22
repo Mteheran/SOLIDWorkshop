@@ -1,0 +1,12 @@
+﻿<Application x:Class="SRP_Demo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SRP_Demo"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="TitleStyle">
+            <Setter Property="Control.FontSize" Value="24" />
+            <Setter Property="Control.FontWeight" Value="Bold" />
+        </Style>
+    </Application.Resources>
+</Application>
