@@ -8,10 +8,10 @@ namespace SOLID.SRP
         List<Person> people = null;
         public PeopleService()
         {
-            LoadProducts();
+            LoadPeople();
         }
 
-        private void LoadProducts()
+        private void LoadPeople()
         {
             people = new List<Person>
             {
