@@ -37,9 +37,9 @@ namespace SRP_PersonService_TOBE
         {
             while (string.IsNullOrEmpty(userInput))
             {
-                ReadData(out userInput, out quantityInput);
+                ReadAppData(out userInput, out quantityInput);
 
-                ModifyData(productInventory, userInput, quantityInput);
+                ModifyAppData(productInventory, userInput, quantityInput);
 
                 PrintReport();
 
@@ -53,7 +53,7 @@ namespace SRP_PersonService_TOBE
             _reportPeopleService.GenerateReport(_people);
         }
 
-        private void ModifyData(PeopleService productInventory, string userInput, string quantityInput)
+        private void ModifyAppData(PeopleService productInventory, string userInput, string quantityInput)
         {
             int idPerson = 0;
             int.TryParse(userInput, out idPerson);
@@ -63,7 +63,7 @@ namespace SRP_PersonService_TOBE
             productInventory.AddPersonYears(idPerson, quantity, _people);
         }
 
-        private void ReadData(out string userInput, out string quantityInput)
+        private void ReadAppData(out string userInput, out string quantityInput)
         {
             Console.WriteLine("Ingresa el Id de una Persona:");
 
