@@ -9,11 +9,14 @@ public class Game
     private int playerX;
     private int playerY;
 
+    public RenderGame render;
+
     public Game()
     {
         isRunning = true;
         playerX = 0;
         playerY = 0;
+        render = new RenderGame(); // or using dependency injection
     }
 
     public void Run()
@@ -24,7 +27,7 @@ public class Game
             ConsoleKeyInfo keyInfo = Console.ReadKey();
             HandleInput(keyInfo);
             Update();
-            Render();
+            render.Render(playerX, playerY);
         }
     }
 
@@ -47,8 +50,11 @@ public class Game
     {
         // Update game state
     }
+}
 
-    private void Render()
+public class RenderGame 
+{
+    public void Render(int playerX, int playerY)
     {
         // Render the game, including the player's position
         Console.Clear();
